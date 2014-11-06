@@ -1,0 +1,27 @@
+.fc-slats{ overflow: hidden; }
+
+.fc-time-grid-event > .fc-content { padding: 10px 10px;}
+
+.fc-time-grid-event .fc-title { padding: 0 10px 0 0; }
+.fc-time-grid-event .fc-title:first-letter{ text-transform: uppercase; }
+
+.fc-time-grid-event .fc-title > i{ font-size: .85em; }
+
+.fc-time-grid-event.fc-event{
+    border-radius: 0px !important;
+    border: none !important;
+}
+
+.fc-classroom{
+    font-size: .85em;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+.fc-day-grid{ display: none; }
+.fc-view{ min-width: 750px; }
+.fc-time-grid-container{ height: auto !important; }
+
+.fc-ltr .fc-time-grid .fc-event-container {
+    margin: 0 0 0 0 !important;
+}
