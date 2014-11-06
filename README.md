@@ -4,6 +4,8 @@ Edt-Lyon1
 Emploi du Temps - Universite Claube Benard Lyon 1 - (Ade Web Direct Planning)
 *Sous Licence MIT*
 
+Démo : http://qoode.fr/laurent/edt
+
 ##Installation
 1. Récupérer le "ressourceId" correspondant à l'emploi du temps
 
