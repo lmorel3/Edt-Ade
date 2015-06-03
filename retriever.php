@@ -1,5 +1,10 @@
 <?php
+    /*
 
+        Edt - Lyon1 by Laurent MOREL - 2014-2015
+        (Licensed under Creative Commons CC-BY-NC)
+
+    */
     date_default_timezone_set('Europe/Paris');
 
     $ressourceID = (isset($_POST['ressourceId']))?$_POST['ressourceId']:"9303";
@@ -8,7 +13,14 @@
     $firstDate = "2015-04-10";
     $lastDate = "2015-06-30";
 
-    $file = fopen("http://adelb.univ-lyon1.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=" . $ressourceID . "&projectId=" . $projectId . "&calType=ical&firstDate=" . $firstDate . "&lastDate=" . $lastDate . "", "r") or exit("Unable to open file!");
+    $univUrl = array(
+        "lyon1" => "http://adelb.univ-lyon1.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+        "sainte" => "https://planning.univ-st-etienne.fr/jsp/custom/modules/plannings/anonymous_cal.jsp"
+    );
+
+    $univID = (isset($_POST['univId']))?$_POST['univId']:"lyon1";
+
+    $file = fopen($univUrl[$univId]."?resources=" . $ressourceID . "&projectId=" . $projectId . "&calType=ical&firstDate=" . $firstDate . "&lastDate=" . $lastDate . "", "r") or exit("Unable to open file!");
     $edt = array();
 
 

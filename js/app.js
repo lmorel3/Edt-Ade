@@ -1,15 +1,21 @@
 /*
 
-    Edt - Lyon1 by Laurent MOREL - 2014
+    Edt - Lyon1 by Laurent MOREL - 2014-2015
     (Licensed under Creative Commons CC-BY-NC)
 
 */
 
 var ressource = 9303;
+var univ = "lyon1";
+
 if(location.search.length > 0){
     switch(location.search){
-        case "?ben":
+        case "?test":
             ressource = 32438;
+            break;
+        case "?testSainte":
+            ressource = 5273;
+            univ = "sainte";
             break;
     }
 }
@@ -23,6 +29,7 @@ $('#calendar').fullCalendar({
             type: 'POST',
             data: {
                 ressourceId: ressource,
+                univId: univ
             },
             error: function(e) {
                 alert('Error during fetching datas...');
