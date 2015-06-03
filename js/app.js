@@ -5,21 +5,30 @@
 
 */
 
+var ressource = 9303;
+if(location.search.length > 0){
+    switch(location.search){
+        case "?ben":
+            ressource = 32438;
+            break;
+    }
+}
+
 $('#calendar').fullCalendar({
 
     eventSources: [
 
         {
-            url: 'rss.php',
+            url: 'retriever.php',
             type: 'POST',
-            //cache: true,
             data: {
-                ressourceId: '9300', // RessourceID
+                ressourceId: ressource,
             },
-            error: function() {
+            error: function(e) {
                 alert('Error during fetching datas...');
+                console.log(e);
             },
-            textColor: 'black' // a non-ajax option*/
+            textColor: 'black'
         }
 
 
