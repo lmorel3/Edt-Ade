@@ -4,7 +4,11 @@
 
     $ressourceID = (isset($_POST['ressourceId']))?$_POST['ressourceId']:"9303";
 
-    $file = fopen("http://adelb.univ-lyon1.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=" . $ressourceID . "&projectId=6&calType=ical&firstDate=2015-04-10&lastDate=2015-06-30", "r") or exit("Unable to open file!");
+    $projectId = 6;
+    $firstDate = "2015-04-10";
+    $lastDate = "2015-06-30";
+
+    $file = fopen("http://adelb.univ-lyon1.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=" . $ressourceID . "&projectId=" . $projectId . "&calType=ical&firstDate=" . $firstDate . "&lastDate=" . $lastDate . "", "r") or exit("Unable to open file!");
     $edt = array();
 
 
